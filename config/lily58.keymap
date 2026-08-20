@@ -66,5 +66,23 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+
+        gw2_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+// |  TAB  | F1  |  Q  |  W   |  E   |  R   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+// |  F1   | F2  |  A  |  S   |  D   |  F   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// |  F3   | F4  |  Z  |  X   |  C   |  V   |        |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//                     | F5   | GUI  |      |        |  |       |      |       |       |
+            bindings = <
+&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
+&kp TAB   &kp F1 &kp Q  &kp W    &kp E    &kp R                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
+&kp F1    &kp F2 &kp A  &kp S    &kp D    &kp F                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&kp F3    &kp F4 &kp Z  &kp X    &kp C    &kp V  &trans    &trans    &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                        &kp F5   &kp RGUI &trans &trans    &trans    &trans &trans   &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
     };
 };
