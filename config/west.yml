@@ -4,16 +4,14 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: lily58
+    - name: indarli
       url-base: https://github.com/Indarli/zmk-config
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: lily58
-      remote: lily58
-      path: boards/shields
+    - name: zmk-shields    
+      remote: indarli
+      revision: main
   self:
     path: config
