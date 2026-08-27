@@ -12,5 +12,8 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: lily58
+      remote: lily58
+      path: boards/shields
   self:
     path: config
