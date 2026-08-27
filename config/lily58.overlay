@@ -1,3 +1,13 @@
 &left_encoder {
     status = "okay";
 };
+#ifdef RIGHT_HALF
+&kscan0 {
+    col-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>,   // ваш новый пин для Col0
+                <&gpio0 10 GPIO_ACTIVE_HIGH>,  // остальные пины — как в оригинале
+                <&gpio0 8 GPIO_ACTIVE_HIGH>,
+                <&gpio0 7 GPIO_ACTIVE_HIGH>,
+                <&gpio0 6 GPIO_ACTIVE_HIGH>,
+                <&gpio0 5 GPIO_ACTIVE_HIGH>;
+};
+#endif
