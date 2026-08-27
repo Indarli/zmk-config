@@ -13,6 +13,5 @@ manifest:
     - name: zmk-lily58
       remote: indarli
       revision: main
-      path: boards/shields
   self:
     path: config
